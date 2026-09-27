@@ -3689,6 +3689,62 @@ body {
             90% { transform: translate(1px, 2px) rotate(0deg); }
             100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
+
+        
+.price-grid,
+.service-cat,
+.tier-block,
+#services,
+.price-card {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.price-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px 10px;
+}
+
+.price-row > span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.price-row .price-val {
+    flex: 0 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .price-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+        padding: 8px 0;
+    }
+
+    .price-row > span:first-child {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+    }
+
+    .price-row .price-val {
+        font-size: 1.05rem;
+        align-self: flex-start;
+    }
+
+    .price-card { padding: 14px; }
+    .price-card h4 { font-size: 0.95rem; }
+}
+
     </style>
 
     <script>
