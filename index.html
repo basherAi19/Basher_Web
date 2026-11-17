@@ -985,6 +985,7 @@ body {
 <body>
 
     <div class="cyber-grid"></div>
+<div id="stickers-bg" aria-hidden="true"></div>
 
     <div class="container">
         <div id="inquiries" class="main-card" data-tilt>
@@ -1941,7 +1942,7 @@ body {
 
         <div id="about" class="main-card active" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <img src="me.jpg" class="profile-pic" alt="Profile">
-            <h1>من هو بشير؟</h1>
+            <h1>عن</h1>
             <div style="color: var(--accent-color); margin-bottom: 15px; line-height: 1.8; text-align: center;">
                 المدرب المعتمد من برنامج صُناع النجاح  <br> الدولي في الإمارات | مكتب العراق
             </div>
@@ -2983,8 +2984,97 @@ body {
 
     </div>
 
+    <!-- ===== الواجهة الرئيسية للهاتف (قابلة للتمرير) ===== -->
+    <div id="home-screen">
+
+        <!-- 1) البطل: من هو بشير؟ -->
+        <section class="hero" id="home-hero">
+            <div class="hero-title reveal">من هو بشير؟</div>
+            <div class="hero-bar reveal" style="--i:1"></div>
+
+            <div class="hero-avatar-wrap reveal" style="--i:2">
+                <div class="orbit-ring">
+                    <span>&lt;/&gt;</span><span>🧠</span><span>⚙️</span><span>🤖</span>
+                </div>
+                <div class="hero-ring"></div>
+                <div class="avatar-fallback">🤖</div>
+                <img src="me.jpg" class="home-avatar" alt="بشير قتيبة" onerror="this.style.display='none'">
+            </div>
+
+            <div class="hero-badge reveal" style="--i:3">المدرب المعتمد من برنامج صُناع النجاح الدولي في الإمارات | مكتب العراق</div>
+            <div class="hero-roles reveal" style="--i:4"><span id="hero-typed"></span><i class="caret"></i></div>
+            <p class="hero-desc reveal" style="--i:5">طالب في جامعة النهرين – كلية هندسة المعلومات – قسم هندسة الاتمتة والذكاء الاصطناعي، وأسعى لبناء أنظمة أتمتة ذكية تخدم المستقبل.</p>
+
+            <div class="hero-stats reveal" style="--i:6">
+                <div class="hs"><b>200+</b><span>طالب مسجل</span></div>
+                <div class="hs"><b>99%</b><span>نسبة الرضا</span></div>
+                <div class="hs"><b>4.9</b><span>متوسط التقييم</span></div>
+            </div>
+
+            <div class="hero-cta reveal" style="--i:7">
+                <button class="btn-pri" onclick="showPage('about')">تعرّف عليّ أكثر</button>
+                <a class="btn-sec" href="https://t.me/BQG19" target="_blank" rel="noopener">سجّل الآن</a>
+            </div>
+
+            <button class="scroll-cue" onclick="document.getElementById('home-explore').scrollIntoView({behavior:'smooth'})">
+                <span>اكتشف المزيد</span><i class="chev"></i>
+            </button>
+        </section>
+
+        <!-- شريط التقنيات المتحرك -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>Python</span><span>✦</span><span>C++</span><span>✦</span><span>Flutter</span><span>✦</span><span>Arduino</span><span>✦</span><span>IoT</span><span>✦</span><span>AI</span><span>✦</span><span>HTML · CSS · JS</span><span>✦</span><span>Automation</span><span>✦</span>
+                <span>Python</span><span>✦</span><span>C++</span><span>✦</span><span>Flutter</span><span>✦</span><span>Arduino</span><span>✦</span><span>IoT</span><span>✦</span><span>AI</span><span>✦</span><span>HTML · CSS · JS</span><span>✦</span><span>Automation</span><span>✦</span>
+            </div>
+        </div>
+
+        <!-- 2) أقسام المنصة -->
+        <section id="home-explore" class="sec">
+            <div class="sec-title reveal">استكشف المنصة</div>
+            <div class="home-grid">
+                <button class="home-tile reveal" style="--i:0" onclick="showPage('lectures')"><span class="ht-ico">📽️</span><span class="ht-txt">الكورسات</span></button>
+                <button class="home-tile reveal" style="--i:1" onclick="showPage('services')"><span class="ht-ico">🛠️</span><span class="ht-txt">الخدمات</span></button>
+                <button class="home-tile reveal" style="--i:0" onclick="showPage('inquiries')"><span class="ht-ico">❓</span><span class="ht-txt">الاستفسارات</span></button>
+                <button class="home-tile reveal" style="--i:1" onclick="showPage('payment')"><span class="ht-ico">💳</span><span class="ht-txt">الدفع</span></button>
+                <button class="home-tile reveal" style="--i:0" onclick="showPage('verify')"><span class="ht-ico">🎓</span><span class="ht-txt">الشهادات</span></button>
+                <button class="home-tile reveal" style="--i:1" onclick="showPage('reviews')"><span class="ht-ico">⭐</span><span class="ht-txt">آراء الطلاب</span></button>
+                <button class="home-tile reveal" style="--i:0" onclick="showPage('projects')"><span class="ht-ico">🚀</span><span class="ht-txt">مشاريعي</span></button>
+                <button class="home-tile reveal" style="--i:1" onclick="showPage('channels')"><span class="ht-ico">📡</span><span class="ht-txt">قنواتي</span></button>
+                <button class="home-tile reveal" style="--i:0" onclick="showPage('help')"><span class="ht-ico">🆘</span><span class="ht-txt">مساعدة</span></button>
+            </div>
+        </section>
+
+        <!-- 3) الدورات -->
+        <section class="sec">
+            <div class="sec-title reveal">دوراتي</div>
+            <div class="course-rail reveal">
+                <button class="rail-card" onclick="showPage('inquiries')"><span>🐍</span><b>برمجة بايثون</b><small>التفاصيل ›</small></button>
+                <button class="rail-card" onclick="showPage('inquiries')"><span>💻</span><b>أساسيات الحاسوب</b><small>التفاصيل ›</small></button>
+                <button class="rail-card" onclick="showPage('inquiries')"><span>🧠</span><b>صُناع الذكاء الاصطناعي</b><small>التفاصيل ›</small></button>
+                <button class="rail-card" onclick="showPage('inquiries')"><span>🤖</span><b>أردوينو وإنترنت الأشياء</b><small>التفاصيل ›</small></button>
+                <button class="rail-card" onclick="showPage('inquiries')"><span>🌐</span><b>تصميم المواقع</b><small>التفاصيل ›</small></button>
+                <button class="rail-card" onclick="showPage('inquiries')"><span>📱</span><b>Flutter &amp; Dart</b><small>التفاصيل ›</small></button>
+                <button class="rail-card" onclick="showPage('inquiries')"><span>🔥</span><b>برمجة C++</b><small>التفاصيل ›</small></button>
+            </div>
+        </section>
+
+        <!-- 4) الخاتمة -->
+        <footer class="home-foot reveal">
+            <a class="foot-tg" href="https://t.me/BQG19" target="_blank" rel="noopener">تواصل معي عبر تيليجرام @BQG19</a>
+            <div class="foot-brand">Basher AI</div>
+            <button class="home-admin" onclick="startBiometricScan()">🔒 Admin</button>
+        </footer>
+    </div>
+
+    <!-- الشريط العلوي داخل الصفحات (للهاتف) -->
+    <div id="mobile-topbar">
+        <button class="mt-back" onclick="mobileBack()">🏠 الرئيسية</button>
+        <span id="mobile-topbar-title"></span>
+    </div>
+
     <nav class="nav-bar">
-        <button class="nav-btn active-btn" onclick="showPage('about', this)">عن</button>
+        <button class="nav-btn active-btn" onclick="showPage('about', this)">من هو بشير</button>
         <button class="nav-btn" onclick="showPage('verify', this)">الشهادات</button>
         <button class="nav-btn" onclick="showPage('inquiries', this)">الاستفسارات</button>
         <button class="nav-btn" onclick="showPage('lectures', this)">الكورسات</button>
@@ -3008,34 +3098,109 @@ body {
         });
 */
 
+        /* ===== التنقل بين الصفحات =====
+           - الكمبيوتر: نفس السلوك السابق (شريط التنقل السفلي).
+           - الهاتف: الرئيسية = شاشة أيقونات تملأ الشاشة، وكل قسم يفتح بملء الشاشة. */
+        const MOBILE_MQ = window.matchMedia('(max-width: 768px)');
+        const isMobileView = () => MOBILE_MQ.matches;
+        let homeScroll = 0;
+
+        // قفز فوري للأعلى/لمكان محدد (بدون أنيميشن حتى لا يتعارض مع التمرير الناعم)
+        function jumpTo(y) {
+            const el = document.documentElement;
+            const prev = el.style.scrollBehavior;
+            el.style.scrollBehavior = 'auto';
+            window.scrollTo(0, y);
+            el.style.scrollBehavior = prev;
+        }
+
+        const PAGE_TITLES = {
+            about: 'من هو بشير', lectures: 'الكورسات', inquiries: 'الاستفسارات',
+            payment: 'الدفع', verify: 'الشهادات', reviews: 'آراء الطلاب',
+            services: 'الخدمات', projects: 'مشاريعي', channels: 'قنواتي',
+            help: 'مساعدة', courses: 'دوراتي', compiler: 'المحرر'
+        };
+
         function showPage(pageId, btn) {
+            const activeCard = document.getElementById(pageId);
+            if (!activeCard) return;
+            // نتذكر مكان التمرير في الرئيسية لنرجع له
+            if (isMobileView() && document.body.classList.contains('mobile-home')) homeScroll = window.scrollY || 0;
+
             // إخفاء كل الواجهات
-            const cards = document.querySelectorAll('.main-card');
-            cards.forEach(card => {
+            document.querySelectorAll('.main-card').forEach(card => {
                 card.style.display = 'none';
                 card.classList.remove('active');
             });
 
-            // إزالة التنشيط من الأزرار
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-btn'));
+            // إزالة التنشيط من أزرار الشريط
+            document.querySelectorAll('.nav-bar .nav-btn').forEach(b => b.classList.remove('active-btn'));
 
-            // إظهار الواجهة المختارة مع الأنيميشن
-            const activeCard = document.getElementById(pageId);
+            // إظهار الواجهة المختارة
             activeCard.style.display = 'block';
+            setTimeout(() => activeCard.classList.add('active'), 10);
 
-            // تأخير بسيط لتفعيل كلاس الحركة
-            setTimeout(() => {
-                activeCard.classList.add('active');
-            }, 10);
+            // تنشيط الزر المناسب
+            if (btn && btn.classList && btn.closest && btn.closest('.nav-bar')) {
+                btn.classList.add('active-btn');
+            } else {
+                const match = document.querySelector('.nav-bar .nav-btn[onclick*="\'' + pageId + '\'"]');
+                if (match) match.classList.add('active-btn');
+            }
 
-            // تنشيط الزر
-            btn.classList.add('active-btn');
+            // وضع الهاتف: الصفحة تملأ الشاشة وتختفي الرئيسية
+            if (isMobileView()) {
+                const fromHome = document.body.classList.contains('mobile-home');
+                document.body.classList.remove('mobile-home');
+                document.body.classList.add('mobile-page');
+                const t = document.getElementById('mobile-topbar-title');
+                if (t) t.textContent = PAGE_TITLES[pageId] || '';
+                // زر الرجوع في الهاتف يرجع للرئيسية بدل الخروج من الموقع
+                if (fromHome) history.pushState({ page: pageId }, '');
+            }
 
-            // اهتزاز خفيف للموبايل عند الضغط (Haptic Feedback)
             if (navigator.vibrate) navigator.vibrate(20);
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            jumpTo(0);
         }
+
+        function goHome() {
+            if (!isMobileView()) return;
+            document.querySelectorAll('.main-card').forEach(card => {
+                card.style.display = 'none';
+                card.classList.remove('active');
+            });
+            document.body.classList.remove('mobile-page');
+            document.body.classList.add('mobile-home');
+            requestAnimationFrame(() => jumpTo(homeScroll));
+        }
+
+        // زر "الرئيسية" في الشريط العلوي
+        function mobileBack() {
+            if (history.state && history.state.page) history.back();
+            else goHome();
+        }
+        window.addEventListener('popstate', () => {
+            if (isMobileView() && document.body.classList.contains('mobile-page')) goHome();
+        });
+
+        // الحالة الابتدائية + التبديل بين الهاتف والكمبيوتر
+        function applyViewMode() {
+            const body = document.body;
+            if (isMobileView()) {
+                if (!body.classList.contains('mobile-page')) {
+                    document.querySelectorAll('.main-card').forEach(c => { c.style.display = 'none'; c.classList.remove('active'); });
+                    body.classList.add('mobile-home');
+                }
+            } else {
+                body.classList.remove('mobile-home', 'mobile-page');
+                const anyVisible = Array.from(document.querySelectorAll('.main-card'))
+                    .some(c => getComputedStyle(c).display !== 'none');
+                if (!anyVisible) showPage('about', document.querySelector('.nav-bar .nav-btn'));
+            }
+        }
+        applyViewMode();
+        if (MOBILE_MQ.addEventListener) MOBILE_MQ.addEventListener('change', applyViewMode);
+        else if (MOBILE_MQ.addListener) MOBILE_MQ.addListener(applyViewMode);
     </script>
 <script>
     function fetchCertificate() {
@@ -3797,112 +3962,8 @@ body {
 
 </script>
 
-<div id="live-toast" class="toast-container">
-        <div class="toast-icon">🎓</div>
-        <div class="toast-content">
-            <div class="toast-title" id="toast-name">محمد من بغداد</div>
-            <div class="toast-msg">سجل للتو في <span id="toast-course" style="color: #00D1FF;">دورة بايثون</span></div>
-            <div class="toast-time">منذ لحظات</div>
-        </div>
-    </div>
 
     <style>
-        .toast-container {
-            position: fixed;
-            bottom: 30px;
-            left: -350px; /* مخفي خارج الشاشة */
-            background: rgba(22, 27, 34, 0.95);
-            border-left: 4px solid #00D1FF;
-            border-radius: 10px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            width: 300px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            z-index: 9999;
-            transition: left 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            direction: rtl;
-        }
-
-        .toast-visible {
-            left: 20px; /* الظهور */
-        }
-
-        .toast-icon {
-            font-size: 2rem;
-            background: rgba(0, 209, 255, 0.1);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-
-        .toast-content {
-            flex: 1;
-        }
-
-        .toast-title {
-            font-weight: bold;
-            font-size: 0.95rem;
-            color: white;
-            margin-bottom: 3px;
-        }
-
-        .toast-msg {
-            font-size: 0.8rem;
-            color: #94A3B8;
-        }
-
-        .toast-time {
-            font-size: 0.7rem;
-            color: #666;
-            margin-top: 5px;
-            text-align: left;
-        }
-
-        /* للموبايل: يظهر في الأعلى */
-        @media screen and (max-width: 600px) {
-            .toast-container {
-                bottom: auto;
-                top: 20px;
-                left: -100%;
-                width: 90%;
-            }
-            .toast-visible {
-                left: 5%;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-        .toast-container {
-            /* ظهور في الأعلى بحجم صغير */
-            top: 70 !important; 
-            left: 0 !important;
-            width: 100% !important;
-            border-radius: 0 !important; /* إلغاء الحواف الدائرية لتلصق بالسقف */
-            padding: 5px 10px !important;
-            transform: translateY(-100%); /* مخفي للأعلى */
-            transition: transform 0.5s ease;
-            bottom: auto !important;
-            border-left: none !important;
-            border-bottom: 2px solid #00D1FF; /* خط أزرق من تحت */
-        }
-
-        .toast-visible {
-            transform: translateY(0) !important; /* ينزل من السقف */
-            left: 0 !important;
-        }
-
-        /* تصغير النص والأيقونة */
-        .toast-icon { width: 30px; height: 30px; font-size: 1.2rem; }
-        .toast-title { font-size: 0.8rem; }
-        .toast-msg { font-size: 0.7rem; }
-    }
-
 /* =========================================
        تصميم الموبايل المصغر (Mini Grid)
        ========================================= */
@@ -3968,95 +4029,11 @@ body {
         #chat-trigger { bottom: 20px !important; left: 20px !important; transform: scale(0.8); }
         #voice-btn { bottom: 20px !important; left: auto !important; right: 20px !important; transform: scale(0.8); }
 
-        /* إخفاء الإشعارات في الموبايل أو رفعها للأعلى جداً */
-        .toast-container { top: 10px !important; bottom: auto !important; transform: scale(0.8); left: 2% !important; }
     }
 
     </style>
 
     <script>
-    // 1. قاعدة بيانات الأسماء والدول
-    const students = [
-        { name: " علي مهند عبدالقادر", country: "العراق " },
-        { name: " علي محسن عبدالرحمن", country: "العراق " },
-        { name: " آية حسين محمد", country: "العراق " },
-        { name: " ايوب شاكر وليد", country: "العراق " },
-        { name: " عبدالرحمن مصطفى حسين", country: "العراق " },
-        { name: " رؤى محمد شاكر", country: "العراق " },
-        { name: " رقية محمود شاكر", country: "العراق " },
-        { name: " نورالهدى علي ابراهيم", country: "العراق " },
-        { name: " شمسُ فاطمة اياد محسن", country: "العراق " },
-        { name: "حسين نصرالله جاسم", country: "الإمارات " },
-        { name: "دعاء محمود كريم", country: "الامارات " },
-        { name: "حوراء سلمان مهدي", country: "الامارات " },
-        { name: "سُندس عبدالله علي", country: "الامارات " },
-        { name: "مريم عبود عبدالستار", country: "الامارات " },
-        { name: "عبدالله سعد محسن", country: "الامارات " },
-        { name: "زينب احمد كريم", country: "الامارات" },
-        { name: " عبدالمنعم خاسف ياسين", country: "الامارات " },
-        { name: " زهراء يوسف نايف", country: "الامارات " },
-        { name: " علي محمد شاكر", country: "بيروت " },
-        { name: " زينب علاء محسن", country: "بيروت " },
-        { name: " تحسين محمد علي", country: "بيروت " },
-        { name: " ضحى اشرف محمود", country: "بيروت " },
-        { name: " شمس لطيف عبدالقادر", country: "بيروت " },
-        { name: " مريم حسن عبدالمهدي", country: "بيروت " },
-        { name: " مهند عامر عبدالستار", country: "بيروت " },
-        { name: "احمد شوقي ياسين", country: "الامارات " }
-    ];
-
-    // 2. قائمة الدورات
-    const courses = [
-        "دورة برمجة بايثون 🐍",
-        "دورة أساسيات الحاسوب 💻",
-        "دورة الأردوينو والتحكم 🤖",
-        "دورة تصميم المواقع 🌐",
-        "C++ دورة برمجة 🔥",
-        "C# دورة برمجة 🎮",
-        " دورة برمجة فلاتر ودارت 📱",
-        "دورة صُناع الذكاء الإصطناعي 🧠",
-
-    ];
-function showNotification() {
-        const toast = document.getElementById('live-toast');
-        const nameEl = document.getElementById('toast-name');
-        const courseEl = document.getElementById('toast-course');
-
-        // اختيار بيانات عشوائية
-        const randomStudent = students[Math.floor(Math.random() * students.length)];
-        const randomCourse = courses[Math.floor(Math.random() * courses.length)];
-
-        // تحديث المحتوى
-        nameEl.innerText = `${randomStudent.name} من ${randomStudent.country}`;
-        courseEl.innerText = randomCourse;
-
-        // إظهار الإشعار
-        toast.classList.add('toast-visible');
-
-        // إخفاء الإشعار بعد 5 ثواني
-        setTimeout(() => {
-            toast.classList.remove('toast-visible');
-
-            // 🔥 هنا السر: جدولة الإشعار القادم بوقت عشوائي
-            scheduleNextNotification();
-        }, 5000);
-    }
-
-    function scheduleNextNotification() {
-        // تحديد وقت عشوائي بين 25 ثانية (25000) و 60 ثانية (60000)
-        // هذا يجعل النمط مستحيلاً على الكشف!
-        const minTime = 60000;
-        const maxTime = 120000;
-        const randomTime = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
-
-        // طباعة الوقت في الكونسول (لك أنت فقط لتراه)
-        console.log(`الإشعار القادم بعد: ${randomTime / 1000} ثانية`);
-
-        setTimeout(showNotification, randomTime);
-    }
-
-    // البدء: أول إشعار يظهر بعد 4 ثواني من فتح الموقع
-    setTimeout(showNotification, 4000);
 
     const dot = document.createElement('span');
     dot.style.cssText = 'position:absolute;top:0;right:0;width:12px;height:12px;background:#FF5252;border-radius:50%;border:2px solid #0B0F19;animation:pulse-red 2s infinite;';
@@ -5246,8 +5223,7 @@ function showServiceCat(catId, btn) {
         /* تحويل البطاقات للأبيض */
         body.light-mode .main-card, 
         body.light-mode .nav-bar, 
-        body.light-mode #chat-window,
-        body.light-mode .toast-container {
+        body.light-mode #chat-window {
             background: #ffffff !important;
             border-color: #ddd !important;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
@@ -7930,6 +7906,514 @@ fin:[
   };
 })();
 
+</script>
+
+<style>
+/* =========================================================
+   1) ملصقات البرمجة والذكاء الاصطناعي (خلفية للهاتف واللابتوب)
+   ========================================================= */
+html { scroll-behavior: smooth; }
+
+#stickers-bg {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden; pointer-events: none; z-index: -1; direction: ltr;
+}
+.stk {
+    position: absolute;
+    opacity: var(--o, .4);
+    will-change: transform;
+    animation:
+        stkIn 1.2s ease var(--d2, 0s) both,
+        stkFloat var(--dur, 9s) ease-in-out var(--del, 0s) infinite alternate;
+}
+.stk svg { display: block; width: 100%; height: auto; overflow: visible; direction: ltr; }
+
+@keyframes stkIn    { from { opacity: 0; } to { opacity: var(--o, .4); } }
+@keyframes stkFloat {
+    from { transform: translate3d(0, 0, 0) rotate(var(--r0, 0deg)); }
+    to   { transform: translate3d(var(--dx, 12px), var(--dy, 20px), 0) rotate(var(--r1, 8deg)); }
+}
+
+/* حركات داخل الملصقات */
+.a-spin    { transform-box: fill-box; transform-origin: center; animation: stkSpin 9s linear infinite; }
+.a-twinkle { transform-box: fill-box; transform-origin: center; animation: stkTw 2.6s ease-in-out infinite; }
+.a-eye     { transform-box: fill-box; transform-origin: center; animation: stkEye 3.4s infinite; }
+.a-wiggle  { transform-box: fill-box; transform-origin: center; animation: stkWig 1.3s ease-in-out infinite alternate; }
+.a-blink   { animation: stkBlink 1s steps(2, start) infinite; }
+.a-pulse   { animation: stkPulse 2.2s ease-in-out infinite; }
+.a-flick   { animation: stkFlick 1.8s steps(1) infinite; }
+.a-w1 { animation: stkW 1.8s infinite; }
+.a-w2 { animation: stkW 1.8s .25s infinite; }
+.a-w3 { animation: stkW 1.8s .5s infinite; }
+.a-draw { stroke-dasharray: 70; animation: stkDraw 3s linear infinite; }
+
+@keyframes stkSpin    { to { transform: rotate(360deg); } }
+@keyframes stkSpinRev { to { transform: rotate(-360deg); } }
+@keyframes stkBlink   { to { opacity: 0; } }
+@keyframes stkPulse   { 50% { opacity: .25; } }
+@keyframes stkTw      { 50% { transform: scale(.7) rotate(20deg); opacity: .6; } }
+@keyframes stkEye     { 0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+@keyframes stkWig     { from { transform: rotate(-8deg); } to { transform: rotate(8deg); } }
+@keyframes stkW       { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
+@keyframes stkDraw    { from { stroke-dashoffset: 70; } to { stroke-dashoffset: -70; } }
+@keyframes stkFlick   { 0% { opacity: 1; } 30% { opacity: .35; } 60% { opacity: 1; } 80% { opacity: .5; } }
+
+@media (min-width: 769px) {
+    .stk svg { filter: drop-shadow(0 0 8px var(--g, rgba(0, 209, 255, .5))); }
+}
+body.light-mode #stickers-bg { opacity: .6; }
+
+@media (prefers-reduced-motion: reduce) {
+    .stk, .stk * { animation: none !important; }
+}
+
+/* =========================================================
+   2) عنوان "من هو بشير؟" (لابتوب + هاتف)
+   ========================================================= */
+@keyframes shimmer { to { background-position: 200% center; } }
+.hero-title, #about h1 {
+    background: linear-gradient(90deg, #fff, #00D1FF, #7B61FF, #00D1FF, #fff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 5s linear infinite;
+}
+#about h1 { font-size: 2.8rem; }
+body.light-mode .hero-title,
+body.light-mode #about h1 {
+    background-image: linear-gradient(90deg, #005bea, #00a8d6, #7B61FF, #00a8d6, #005bea);
+}
+
+/* =========================================================
+   3) واجهة الهاتف: رئيسية قابلة للتمرير + صفحات بملء الشاشة
+   (لا تؤثر على الكمبيوتر)
+   ========================================================= */
+#home-screen, #mobile-topbar { display: none; }
+
+@media screen and (max-width: 768px) {
+
+    .nav-bar { display: none !important; }
+    .cyber-grid { animation: none; }
+
+    body { padding: 0 !important; overflow-x: hidden; }
+
+    /* ---------- الرئيسية ---------- */
+    body.mobile-home .main-card { display: none !important; }
+    body.mobile-home .container { display: none; }
+
+    body.mobile-home #home-screen {
+        display: block;
+        position: relative;
+        z-index: 1;
+        direction: rtl;
+        padding-bottom: 120px;
+    }
+
+    /* ظهور تدريجي عند التمرير */
+    #home-screen .reveal { opacity: 0; }
+    #home-screen .reveal.in {
+        opacity: 1;
+        animation: rvIn .6s ease backwards;
+        animation-delay: calc(var(--i, 0) * 80ms);
+    }
+    /* العنوان: ظهور + لمعان معاً */
+    #home-screen .hero-title.reveal.in { animation: rvIn .6s ease backwards, shimmer 5s linear infinite; }
+    @keyframes rvIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+    /* ----- البطل ----- */
+    .hero {
+        min-height: 100vh; min-height: 100dvh;
+        display: flex; flex-direction: column; align-items: center;
+        text-align: center;
+        padding: calc(env(safe-area-inset-top, 0px) + 74px) 20px 26px;
+    }
+
+    .hero-title {
+        font-size: 3rem; font-weight: 700; line-height: 1.25;
+        filter: drop-shadow(0 0 18px rgba(0, 209, 255, .35));
+    }
+
+    .hero-bar {
+        width: 70px; height: 4px; border-radius: 4px;
+        margin: 6px auto 18px;
+        background: linear-gradient(90deg, #00D1FF, #7B61FF);
+        box-shadow: 0 0 14px rgba(0, 209, 255, .6);
+    }
+
+    .hero-avatar-wrap { position: relative; width: 172px; height: 172px; margin: 0 auto 18px; }
+
+    .orbit-ring { position: absolute; top: 0; right: 0; bottom: 0; left: 0; animation: stkSpin 16s linear infinite; }
+    .orbit-ring span {
+        position: absolute; width: 34px; height: 34px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 15px; font-family: Consolas, Menlo, monospace; font-weight: 700; color: #00D1FF;
+        background: rgba(11, 15, 25, .92);
+        border: 1px solid rgba(0, 209, 255, .6);
+        box-shadow: 0 0 12px rgba(0, 209, 255, .35);
+        animation: stkSpinRev 16s linear infinite;
+        direction: ltr;
+    }
+    .orbit-ring span:nth-child(1) { top: -4px;  left: 50%; margin-left: -17px; }
+    .orbit-ring span:nth-child(2) { right: -4px; top: 50%;  margin-top: -17px; }
+    .orbit-ring span:nth-child(3) { bottom: -4px; left: 50%; margin-left: -17px; }
+    .orbit-ring span:nth-child(4) { left: -4px;  top: 50%;  margin-top: -17px; }
+
+    .hero-ring {
+        position: absolute; top: 13px; right: 13px; bottom: 13px; left: 13px;
+        border-radius: 50%;
+        background: conic-gradient(#00D1FF, #7B61FF, #FF5C8A, #00D1FF);
+        animation: stkSpin 7s linear infinite;
+        box-shadow: 0 0 34px rgba(0, 209, 255, .45);
+    }
+    .avatar-fallback, .home-avatar {
+        position: absolute; top: 18px; right: 18px;
+        width: 136px; height: 136px; border-radius: 50%;
+        background: #0B0F19;
+    }
+    .avatar-fallback { display: flex; align-items: center; justify-content: center; font-size: 58px; }
+    .home-avatar { object-fit: cover; z-index: 1; }
+
+    .hero-badge {
+        display: inline-block; max-width: 100%;
+        padding: 7px 14px; border-radius: 26px;
+        border: 1px solid rgba(0, 209, 255, .4);
+        background: rgba(0, 209, 255, .08);
+        color: var(--accent-color);
+        font-size: .76rem; line-height: 1.8;
+    }
+
+    .hero-roles { margin-top: 12px; font-size: 1.05rem; font-weight: 700; color: #fff; min-height: 1.9em; }
+    .caret {
+        display: inline-block; width: 2px; height: 1.1em; margin-right: 3px; vertical-align: -3px;
+        background: var(--accent-color); animation: stkBlink .8s steps(2, start) infinite;
+    }
+
+    .hero-desc { margin: 6px 0 16px; max-width: 340px; font-size: .86rem; line-height: 1.9; color: var(--text-gray); }
+
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; max-width: 360px; }
+    .hs {
+        padding: 10px 4px; border-radius: 16px;
+        background: rgba(255, 255, 255, .05);
+        border: 1px solid rgba(0, 209, 255, .25);
+    }
+    .hs b { display: block; font-size: 1.25rem; color: var(--accent-color); }
+    .hs span { font-size: .7rem; color: var(--text-gray); }
+
+    .hero-cta { display: flex; gap: 10px; width: 100%; max-width: 360px; margin-top: 18px; }
+    .btn-pri, .btn-sec {
+        flex: 1; display: flex; align-items: center; justify-content: center;
+        border: 0; border-radius: 26px; padding: 13px 10px;
+        font-family: 'Cairo', sans-serif; font-size: .95rem; font-weight: 700;
+        text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .btn-pri { background: linear-gradient(45deg, #00D1FF, #005bea); color: #0B0F19; box-shadow: 0 6px 18px rgba(0, 209, 255, .3); }
+    .btn-sec { background: #0088cc; color: #fff; }
+    .btn-pri:active, .btn-sec:active { transform: scale(.96); }
+
+    .scroll-cue {
+        margin-top: auto; padding-top: 22px;
+        display: flex; flex-direction: column; align-items: center; gap: 6px;
+        background: none; border: 0; color: var(--text-gray);
+        font-family: 'Cairo', sans-serif; font-size: .8rem; cursor: pointer;
+    }
+    .chev {
+        width: 13px; height: 13px;
+        border-right: 2px solid var(--accent-color); border-bottom: 2px solid var(--accent-color);
+        transform: rotate(45deg); animation: cue 1.6s ease-in-out infinite;
+    }
+    @keyframes cue { 0%, 100% { transform: translateY(0) rotate(45deg); opacity: .4; } 50% { transform: translateY(8px) rotate(45deg); opacity: 1; } }
+
+    /* ----- شريط التقنيات ----- */
+    .ticker {
+        overflow: hidden; direction: ltr; padding: 11px 0;
+        background: rgba(11, 15, 25, .65);
+        border-top: 1px solid rgba(0, 209, 255, .25);
+        border-bottom: 1px solid rgba(0, 209, 255, .25);
+    }
+    .ticker-track { display: flex; width: max-content; animation: tick 24s linear infinite; }
+    .ticker-track span {
+        padding: 0 14px; white-space: nowrap;
+        font-family: Consolas, Menlo, monospace; font-size: .85rem; color: var(--accent-color);
+    }
+    @keyframes tick { to { transform: translateX(-50%); } }
+
+    /* ----- الأقسام ----- */
+    .sec { padding: 32px 16px 0; }
+    .sec-title {
+        font-size: 1.15rem; font-weight: 700; text-align: right;
+        padding-right: 10px; border-right: 3px solid var(--accent-color); margin-bottom: 14px;
+    }
+
+    .home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .home-grid .home-tile:last-child { grid-column: 1 / -1; }
+
+    .home-tile {
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        gap: 6px; min-height: 108px; padding: 10px; border-radius: 22px;
+        border: 1px solid rgba(0, 209, 255, .28);
+        background: linear-gradient(145deg, rgba(0, 209, 255, .12), rgba(123, 97, 255, .10));
+        color: #fff; font-family: 'Cairo', sans-serif; cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform .15s ease, background .2s ease, border-color .2s ease;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+    }
+    .home-tile:active { transform: scale(.95); background: rgba(0, 209, 255, .25); border-color: var(--accent-color); }
+    .ht-ico { font-size: 2rem; line-height: 1; }
+    .ht-txt { font-size: .95rem; font-weight: 700; }
+
+    /* شريط الدورات الأفقي */
+    .course-rail {
+        display: flex; gap: 12px; overflow-x: auto;
+        scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+        margin: 0 -16px; padding: 4px 16px 14px; scrollbar-width: none;
+    }
+    .course-rail::-webkit-scrollbar { display: none; }
+    .rail-card {
+        flex: 0 0 150px; scroll-snap-align: start;
+        display: flex; flex-direction: column; align-items: center; gap: 6px;
+        padding: 18px 10px; border-radius: 20px;
+        border: 1px solid rgba(0, 209, 255, .28);
+        background: rgba(255, 255, 255, .05);
+        color: #fff; font-family: 'Cairo', sans-serif; cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .rail-card span { font-size: 2.2rem; line-height: 1; }
+    .rail-card b { font-size: .88rem; line-height: 1.5; }
+    .rail-card small { color: var(--accent-color); font-size: .72rem; }
+    .rail-card:active { transform: scale(.96); }
+
+    /* الخاتمة */
+    .home-foot { padding: 36px 16px 0; text-align: center; }
+    .foot-tg {
+        display: block; padding: 14px; border-radius: 16px;
+        background: #0088cc; color: #fff; text-decoration: none; font-weight: 700; font-size: .92rem;
+    }
+    .foot-brand { margin-top: 18px; font-family: Consolas, Menlo, monospace; color: var(--text-gray); font-size: .8rem; letter-spacing: 2px; }
+    .home-admin {
+        margin-top: 12px;
+        background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .15);
+        color: var(--text-gray); font-family: 'Cairo', sans-serif; font-size: .75rem;
+        padding: 6px 16px; border-radius: 20px; cursor: pointer;
+    }
+
+    /* ---------- الصفحات بملء الشاشة ---------- */
+    .container { display: block; min-height: 100vh; min-height: 100dvh; padding: 0; perspective: none; }
+
+    .main-card {
+        width: 100%; max-width: none;
+        min-height: 100vh; min-height: 100dvh;
+        border-radius: 0; border: none; box-shadow: none;
+        padding: calc(env(safe-area-inset-top, 0px) + 72px) 16px 100px;
+        background: rgba(11, 15, 25, .62);
+        -webkit-backdrop-filter: none; backdrop-filter: none;
+        transform: none !important; transform-style: flat;
+    }
+    .main-card.active { animation: pageIn .3s ease; }
+    @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+    .main-card .js-tilt-glare { display: none !important; }
+    .main-card h1 { font-size: 1.7rem; }
+    #about h1 { font-size: 2.2rem; }
+
+    body.mobile-page #mobile-topbar {
+        display: flex; align-items: center; gap: 12px;
+        position: fixed; top: 0; right: 0; left: 0; z-index: 900;
+        padding: calc(env(safe-area-inset-top, 0px) + 8px) 12px 8px 76px;
+        background: rgba(11, 15, 25, .92);
+        -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(0, 209, 255, .3);
+        direction: rtl; min-height: 56px;
+    }
+    .mt-back {
+        background: rgba(0, 209, 255, .12); border: 1px solid rgba(0, 209, 255, .4);
+        color: var(--accent-color); font-family: 'Cairo', sans-serif;
+        font-size: .85rem; font-weight: 700; padding: 7px 14px; border-radius: 20px;
+        cursor: pointer; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+    }
+    #mobile-topbar-title { color: #fff; font-weight: 700; font-size: 1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* الوضع النهاري */
+    body.light-mode .home-tile, body.light-mode .rail-card {
+        background: #fff; border-color: #ddd; color: #1a1a1a; box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+    }
+    body.light-mode .hero-roles, body.light-mode .sec-title { color: #1a1a1a; }
+    body.light-mode .hero-desc, body.light-mode .hs span, body.light-mode .foot-brand { color: #555; }
+    body.light-mode .hs { background: #fff; border-color: #ddd; }
+    body.light-mode .ticker { background: rgba(255, 255, 255, .85); }
+    body.light-mode .orbit-ring span { background: #fff; }
+    body.light-mode .avatar-fallback, body.light-mode .home-avatar { background: #fff; }
+    body.light-mode #mobile-topbar { background: rgba(255, 255, 255, .95); }
+    body.light-mode #mobile-topbar-title { color: #1a1a1a; }
+    body.light-mode .main-card { background: #ffffff !important; }
+}
+</style>
+<script>
+/* ===== ملصقات البرمجة والذكاء الاصطناعي المتحركة ===== */
+(function () {
+    const host = document.getElementById('stickers-bg');
+    if (!host) return;
+
+    const COLORS = ['#00D1FF', '#7B61FF', '#10B981', '#F59E0B', '#FF5C8A'];
+    const g = (c, inner) => '<g fill="none" stroke="' + c + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">' + inner + '</g>';
+    const badge = (c, inner) => '<svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" direction="ltr">' +
+        '<rect x="3" y="3" width="66" height="66" rx="20" fill="' + c + '" fill-opacity=".10" stroke="' + c + '" stroke-opacity=".55" stroke-width="2.5"/>' + inner + '</svg>';
+    const text = (c, s, size, y, cls) => '<text class="' + (cls || '') + '" x="36" y="' + y + '" text-anchor="middle" font-size="' + size +
+        '" font-weight="700" font-family="Consolas,Menlo,monospace" fill="' + c + '" stroke="none">' + s + '</text>';
+
+    const ICONS = [
+        // </> كود
+        c => badge(c, g(c, '<polyline points="26,26 15,36 26,46"/><polyline points="46,26 57,36 46,46"/><line x1="40" y1="24" x2="32" y2="48"/>')),
+        // { }
+        c => badge(c, text(c, '{ }', 30, 46, 'a-pulse')),
+        // طرفية
+        c => badge(c, g(c, '<rect x="13" y="18" width="46" height="36" rx="5"/><line x1="13" y1="27" x2="59" y2="27"/><polyline points="21,35 27,40 21,45"/><line class="a-blink" x1="32" y1="46" x2="42" y2="46"/>')),
+        // روبوت
+        c => badge(c, g(c, '<rect x="18" y="26" width="36" height="28" rx="8"/><line x1="36" y1="26" x2="36" y2="16"/><circle class="a-pulse" cx="36" cy="14" r="3" fill="' + c + '"/><circle class="a-eye" cx="28" cy="38" r="3.5" fill="' + c + '"/><circle class="a-eye" cx="44" cy="38" r="3.5" fill="' + c + '"/><line x1="29" y1="47" x2="43" y2="47"/><line x1="13" y1="36" x2="13" y2="44"/><line x1="59" y1="36" x2="59" y2="44"/>')),
+        // شبكة عصبية
+        c => {
+            const L = [[18, [24, 48]], [36, [20, 36, 52]], [54, [30, 42]]];
+            let ln = '', nd = '', k = 0;
+            for (let i = 0; i < L.length - 1; i++) for (const y1 of L[i][1]) for (const y2 of L[i + 1][1])
+                ln += '<line x1="' + L[i][0] + '" y1="' + y1 + '" x2="' + L[i + 1][0] + '" y2="' + y2 + '"/>';
+            L.forEach(([x, ys]) => ys.forEach(y => {
+                nd += '<circle class="a-pulse" style="animation-delay:' + ((k++ % 5) * 0.35) + 's" cx="' + x + '" cy="' + y + '" r="4.5" fill="' + c + '"/>';
+            }));
+            return badge(c, '<g stroke="' + c + '" stroke-width="1.5" opacity=".55">' + ln + '</g>' + nd);
+        },
+        // معالج CPU
+        c => {
+            let pins = '';
+            [29, 36, 43].forEach(v => { pins += '<line x1="' + v + '" y1="13" x2="' + v + '" y2="21"/><line x1="' + v + '" y1="51" x2="' + v + '" y2="59"/><line x1="13" y1="' + v + '" x2="21" y2="' + v + '"/><line x1="51" y1="' + v + '" x2="59" y2="' + v + '"/>'; });
+            return badge(c, g(c, '<rect x="21" y="21" width="30" height="30" rx="4"/><rect class="a-pulse" x="29" y="29" width="14" height="14" rx="2"/>' + pins));
+        },
+        // ترس
+        c => badge(c, g(c, '<g class="a-spin"><circle cx="36" cy="36" r="13"/><circle cx="36" cy="36" r="5"/><circle cx="36" cy="36" r="20" stroke-width="6" stroke-dasharray="4.5 4.49"/></g>')),
+        // باغ
+        c => badge(c, g(c, '<g class="a-wiggle"><ellipse cx="36" cy="40" rx="11" ry="14"/><circle cx="36" cy="24" r="6"/><line x1="36" y1="28" x2="36" y2="54"/><line x1="32" y1="19" x2="28" y2="13"/><line x1="40" y1="19" x2="44" y2="13"/><line x1="25" y1="34" x2="15" y2="30"/><line x1="25" y1="42" x2="14" y2="42"/><line x1="26" y1="50" x2="16" y2="56"/><line x1="47" y1="34" x2="57" y2="30"/><line x1="47" y1="42" x2="58" y2="42"/><line x1="46" y1="50" x2="56" y2="56"/></g>')),
+        // واي فاي / IoT
+        c => badge(c, g(c, '<path class="a-w1" d="M14 29 Q36 9 58 29"/><path class="a-w2" d="M22 37 Q36 25 50 37"/><path class="a-w3" d="M29 44 Q36 38 43 44"/><circle cx="36" cy="52" r="3" fill="' + c + '"/>')),
+        // قاعدة بيانات
+        c => badge(c, g(c, '<ellipse cx="36" cy="21" rx="16" ry="6"/><path d="M20 21 V51 A16 6 0 0 0 52 51 V21"/><path d="M20 36 A16 6 0 0 0 52 36"/>')),
+        // Git
+        c => badge(c, g(c, '<circle cx="24" cy="20" r="5"/><circle cx="24" cy="52" r="5"/><circle class="a-pulse" cx="50" cy="30" r="5"/><line x1="24" y1="25" x2="24" y2="47"/><path d="M24 42 Q24 32 45 31"/>')),
+        // فكرة
+        c => badge(c, g(c, '<path class="a-pulse" d="M36 13 a14 14 0 0 1 8 25 v6 h-16 v-6 a14 14 0 0 1 8 -25z"/><line x1="29" y1="52" x2="43" y2="52"/><line x1="31" y1="58" x2="41" y2="58"/>')),
+        // شرارة الذكاء الاصطناعي
+        c => badge(c, '<g fill="' + c + '" stroke="' + c + '" stroke-width="2" stroke-linejoin="round"><path class="a-twinkle" d="M34 14 L39 31 L56 36 L39 41 L34 58 L29 41 L12 36 L29 31 Z"/><path class="a-pulse" d="M57 12 L59 18 L65 20 L59 22 L57 28 L55 22 L49 20 L55 18 Z" stroke-width="1"/></g>'),
+        // لابتوب
+        c => badge(c, g(c, '<rect x="18" y="20" width="36" height="25" rx="3"/><path d="M12 51 H60 L56 45 H16 Z"/><polyline points="29,28 25,32.5 29,37"/><polyline class="a-blink" points="43,28 47,32.5 43,37"/>')),
+        // سحابة
+        c => badge(c, g(c, '<path d="M22 49 H50 A9 9 0 0 0 50 31 A14 14 0 0 0 23 34 A8 8 0 0 0 22 49 Z"/><polyline class="a-pulse" points="31,42 36,37 41,42"/>')),
+        // لوحة أردوينو
+        c => badge(c, g(c, '<rect x="12" y="24" width="48" height="30" rx="4"/><rect x="27" y="32" width="14" height="14" rx="2"/><rect x="12" y="32" width="8" height="12"/><line x1="26" y1="24" x2="26" y2="18"/><line x1="34" y1="24" x2="34" y2="18"/><line x1="42" y1="24" x2="42" y2="18"/><line x1="50" y1="24" x2="50" y2="18"/><circle class="a-blink" cx="51" cy="40" r="2.5" fill="' + c + '"/>')),
+        // شات بوت AI
+        c => badge(c, g(c, '<path d="M14 17 H58 V46 H34 L24 56 V46 H14 Z"/>') + text(c, 'AI', 20, 39, 'a-pulse')),
+        // راسم إشارة
+        c => badge(c, g(c, '<rect x="12" y="18" width="48" height="36" rx="5"/><path class="a-draw" d="M16 36 Q22 22 28 36 T40 36 T52 36"/>')),
+        // دارة إلكترونية
+        c => badge(c, g(c, '<polyline points="14,22 30,22 30,36 48,36"/><polyline points="14,52 26,52 26,44"/><polyline points="48,36 48,22 58,22"/><circle class="a-pulse" cx="14" cy="22" r="3" fill="' + c + '"/><circle cx="58" cy="22" r="3" fill="' + c + '"/><circle class="a-pulse" cx="14" cy="52" r="3" fill="' + c + '"/><circle cx="48" cy="36" r="3" fill="' + c + '"/>')),
+        // ثنائي
+        c => badge(c, text(c, '0110', 17, 33, 'a-flick') + text(c, '1001', 17, 54, 'a-pulse')),
+        // رياضيات
+        c => badge(c, text(c, 'f(x)', 24, 44, '')),
+        c => badge(c, text(c, 'Σ', 36, 49, 'a-pulse')),
+        c => badge(c, text(c, 'π', 38, 49, ''))
+    ];
+
+    const SNIPS = [
+        'print("Hello AI")', 'import torch', 'while(true){}', 'git push origin main',
+        'void setup(){}', 'if ai: learn()', '#include <iostream>', 'npm run dev',
+        'model.fit(X, y)', 'digitalWrite(13, HIGH)', '<h1>Hello</h1>', 'pip install numpy'
+    ];
+    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const snip = (c, s) => {
+        const w = Math.ceil(44 + s.length * 8);
+        return { w: w, svg: '<svg viewBox="0 0 ' + w + ' 38" xmlns="http://www.w3.org/2000/svg" direction="ltr">' +
+            '<rect x="2" y="2" width="' + (w - 4) + '" height="34" rx="17" fill="' + c + '" fill-opacity=".10" stroke="' + c + '" stroke-opacity=".55" stroke-width="2"/>' +
+            '<circle class="a-pulse" cx="19" cy="19" r="4" fill="' + c + '"/>' +
+            '<text x="31" y="24" font-size="13" font-family="Consolas,Menlo,monospace" fill="' + c + '" style="direction:ltr;unicode-bidi:embed">' + esc(s) + '</text></svg>' };
+    };
+
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const shuffle = arr => { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; };
+
+    let lastKey = '';
+    function build() {
+        const W = window.innerWidth, H = window.innerHeight, mobile = W <= 768;
+        const cell = mobile ? 150 : 200;
+        const cols = Math.max(2, Math.round(W / cell)), rows = Math.max(3, Math.round(H / cell));
+        const key = cols + 'x' + rows;
+        if (key === lastKey) return;
+        lastKey = key;
+
+        const snips = mobile ? SNIPS.slice().sort((a, b) => a.length - b.length).slice(0, 5) : SNIPS;
+        const defs = shuffle([].concat(ICONS.map((_, i) => ({ t: 'i', i: i })), snips.map(s => ({ t: 's', s: s }))));
+        const cw = W / cols, ch = H / rows;
+        let html = '', n = 0;
+
+        for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+            const d = defs[n % defs.length];
+            const col = COLORS[(r * 3 + c * 2 + n) % COLORS.length];
+            n++;
+            let width, svg;
+            if (d.t === 'i') {
+                width = mobile ? rnd(40, 58) : rnd(56, 92);
+                svg = ICONS[d.i](col);
+            } else {
+                const s = snip(col, d.s);
+                width = s.w * (mobile ? rnd(.55, .65) : rnd(.8, .95));
+                svg = s.svg;
+            }
+            let x = (c + .1 + Math.random() * .8) * cw - width / 2;
+            const y = (r + .1 + Math.random() * .8) * ch - 20;
+            x = Math.max(-8, Math.min(W - width + 8, x));
+            const r0 = rnd(-14, 14);
+            html += '<div class="stk" style="left:' + x.toFixed(0) + 'px;top:' + y.toFixed(0) + 'px;width:' + width.toFixed(0) + 'px;' +
+                '--o:' + (mobile ? rnd(.28, .45) : rnd(.32, .55)).toFixed(2) + ';' +
+                '--dx:' + rnd(-26, 26).toFixed(0) + 'px;--dy:' + rnd(-34, 34).toFixed(0) + 'px;' +
+                '--r0:' + r0.toFixed(0) + 'deg;--r1:' + (r0 + rnd(-16, 16)).toFixed(0) + 'deg;' +
+                '--dur:' + rnd(6, 12).toFixed(1) + 's;--del:-' + rnd(0, 8).toFixed(1) + 's;--d2:' + rnd(0, 1.2).toFixed(1) + 's;' +
+                '--g:' + col + '80">' + svg + '</div>';
+        }
+        host.innerHTML = html;
+    }
+
+    build();
+    let rt;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 300); });
+})();
+
+/* ===== الكتابة المتحركة تحت العنوان ===== */
+(function () {
+    const el = document.getElementById('hero-typed');
+    if (!el) return;
+    const roles = ['طالب هندسة الاتمتة والذكاء الاصطناعي', 'مدرب برمجة معتمد', 'صانع مشاريع أردوينو وإنترنت الأشياء', 'باني أنظمة ذكاء اصطناعي'];
+    let r = 0, c = 0, del = false;
+    function tick() {
+        if (document.hidden) { setTimeout(tick, 1000); return; }
+        const w = roles[r];
+        if (!del) {
+            c++; el.textContent = w.slice(0, c);
+            if (c >= w.length) { del = true; setTimeout(tick, 1700); return; }
+            setTimeout(tick, 70);
+        } else {
+            c--; el.textContent = w.slice(0, c);
+            if (c <= 0) { del = false; r = (r + 1) % roles.length; setTimeout(tick, 350); return; }
+            setTimeout(tick, 32);
+        }
+    }
+    tick();
+})();
+
+/* ===== ظهور العناصر تدريجياً أثناء النزول ===== */
+(function () {
+    const els = document.querySelectorAll('#home-screen .reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(e => io.observe(e));
+})();
 </script>
 </body>
 </html>
